@@ -1,18 +1,57 @@
+<!DOCTYPE html>
+
 <html>
 
 <head>
-    <link href="/style.css" type="text/css" rel="stylesheet" />
     <title>Timestamp mircoservice</title>
+    <meta name="description" content="A FCC project to build a fullstack application to convert natural and unix dates.">
+    <meta charset="UTF-8">
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/style.css" type="text/css" rel="stylesheet" />
 </head>
+
 
 <body>
     <h1>FCC - Timestamp Microservice</h1>
-    <p>This project has the following user stories:</p>
-    <ul>
-        <li>I can pass a string as a parameter, and it will check to see whether that string contains either a unix timestamp or a natural language date (example: January 1, 2016).</li>
-        <li>If it does, it returns both the Unix timestamp and the natural language form of that date.</li>
-        <li>If it does not contain a date or Unix timestamp, it returns null for those properties.</li>
-    </ul>
+    <div class="container-fluid">
+        <div id="left" class="col-xs-12 col-md-6">
+            <h2>This project has the following user stories:</h2>
+            <ul>
+                <li>I can pass a string as a parameter, and it will check to see whether that string contains either a unix timestamp or a natural language date (example: January 1, 2016).</li>
+                <li>If it does, it returns both the Unix timestamp and the natural language form of that date.</li>
+                <li>If it does not contain a date or Unix timestamp, it returns null for those properties.</li>
+            </ul>
+        </div>
+
+        <div id="right" class="col-xs-12 col-md-6">
+            <h2>Example uses:</h2>
+            <p>Dates can be entered as a unix timestamp or as a natural language date. Note that this app uses a MM-DD-YYYY format for dates.</p>
+            <ul>
+                <li><a href="https://ddryburgh-timestamp.herokuapp.com/june 29, 1987">./June 29, 1987</a></li>
+                <li><a href="https://ddryburgh-timestamp.herokuapp.com/06-29-1987">./06-29-1987</a></li>
+                <li><a href="https://ddryburgh-timestamp.herokuapp.com/551948400">./551948400</a></li>
+            </ul>
+        </div>
+        <div id="icons" class="col-xs-12">
+            <a href="https://www.freecodecamp.com/challenges/timestamp-microservice" target="_blank">
+                <i class="fa fa-free-code-camp fa-3x" aria-hidden="true"></i></a>
+            <a href="https://github.com/doug-dryburgh/FCC-Timestamp" target="_blank">
+                <i class="fa fa-github fa-3x" aria-hidden="true"></i></a>
+            <a href="http://ddryburugh.com" target="_blank">
+                <i class="fa fa-user fa-3x" aria-hidden="true"></i></a>
+
+            <a href="mailto:douglas.dryburgh@gmail.com">
+                <i class="fa fa-envelope fa-3x" aria-hidden="true"></i></a>
+            <a href="https://www.linkedin.com/in/doug-dryburgh-7056b513b/" target="_blank">
+                <i class="fa fa-linkedin fa-3x" aria-hidden="true"></i></a>
+
+
+
+
+        </div>
+    </div>
+
+    <script src="https://use.fontawesome.com/00e02cdbce.js"></script>
 </body>
 
 </html>

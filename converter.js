@@ -1,11 +1,29 @@
 var moment = require("moment");
 
-module.exports = function(input) {
-  return {unix: input, natural: moment.unix(input).format("MMMM D, YYYY")}  
+module.exports = function (input) {
+    
+    //UNIX
+    if (!isNaN(input)) {
+        return {
+            unix: input,
+            natural: moment.unix(input).format("MMMM D, YYYY")
+        };
+    }
+    else {
+        var date = Date.parse(input);
+        //GIBBERISH
+        if (isNaN(date)) {
+            return {
+                unix: "null"
+                , natural: "null"
+            };
+        }
+        //NATURAL
+        else {
+            return {
+                unix: moment(date).unix(),
+                natural: moment(date).format("MMMM D, YYYY")
+            };
+        }
+    }
 };
-
-
-/* convert unix to natural via moment: moment.unix(*timestamp*).format(*format*) 
-
-res.json({ unix: req.params.unix, natural: moment.unix(req.params.unix).format("MMMM D, YYYY")});
-*/
